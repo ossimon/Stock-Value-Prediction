@@ -15,3 +15,6 @@ Strategia będzie reprezentowana przez drzewko `if`ów. Każdy `if` odpowiada je
 
 ### Genotyp
 Genotyp będzie reprezentował kolejne, wyżej wspomniane stałe w drzewku `if`ów, które reprezentuje strategię. Przykładowo może mieć 3 geny reprezentujące granice: aktualnej wartości waluty, pierwszej i drugiej pochodnej. W praktyce będzie to wykorzystywało bardziej zawiłe metryki, to jest jedynie przykład.
+
+### Waluta, którą badamy
+Bitcoin/USD
