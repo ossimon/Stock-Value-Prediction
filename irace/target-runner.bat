@@ -20,7 +20,7 @@
 
 :: Please change the EXE and FIXED_PARAMS to the correct ones
 SET "exe=python"
-SET "fixed_params=irace_test.py"
+SET "fixed_params=..\src\irace_test.py"
 
 FOR /f "tokens=1-4*" %%a IN ("%*") DO (
 	SET candidate=%%a
