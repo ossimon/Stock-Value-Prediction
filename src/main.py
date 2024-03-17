@@ -4,7 +4,7 @@ import cma
 
 # DXY - dollar
 # BTC-USD - bitcoin
-data = yf.download("BTC-USD", start="2020-01-01", end="2024-01-01", auto_adjust=True)
+data = yf.download("DXY", start="2020-01-01", end="2024-01-01", auto_adjust=True)
 
 # transform keys of data to lower case
 data.columns = [x.lower() for x in data.columns]
