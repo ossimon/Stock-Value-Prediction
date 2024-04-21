@@ -25,21 +25,22 @@ class Logger:
             self.logs.loc[index, 'total_cost'] = self.logs.loc[index]['total_cost'] + value['total_cost']
             self.logs.loc[index, 'budget_after_trans'] = value['budget_after_trans']
 
-
-configuration_id = sys.argv[1]
-instance_id = sys.argv[2]
-seed = sys.argv[3]
-instance = sys.argv[4]
-# instance = './src/data.csv'
+seed = 0
+instance = './src/data.csv'
 
 # read the parameters
 params = {}
-for i in range(5, len(sys.argv)):
+for i in range(1, len(sys.argv)):
     if sys.argv[i].startswith('--'):
         param = sys.argv[i][2:]
         value = sys.argv[i + 1]
         i += 1
         params[param] = value
+
+if 'instance' in params:
+    instance = params['instance']
+if 'seed' in params:
+    seed = int(params['seed'])
 
 # read the instance
 data = pd.read_csv(instance)
@@ -85,14 +86,15 @@ for col1 in original_columns:
 data = pd.concat(new_columns, axis=1)
 
 # normalize data to have values between 0 and 1
-print(f'Num of columns: {len(data.columns)}')
+# print(f'Num of columns: {len(data.columns)}')
+
 true_cost = data['close']
 scaler = preprocessing.MinMaxScaler()
 data[data.columns] = scaler.fit_transform(
     data[data.columns])
 
 # print the first 5 rows of the data
-print(data.head())
+# print(data.head())
 
 
 # define the function to optimize
@@ -137,26 +139,33 @@ def func(x, data, true_cost, budget=1_000_000, logger=None, fee=0.01):
 
 options = {
     'CMA_active_injected': float(params.get('CMA_active_injected', '0')),  #v weight multiplier for negative weights of injected solutions
-    'CMA_cmean': float(params.get('CMA_cmean', '1')),  # learning rate for the mean value
+    'CMA_cmean': 10 ** float(params.get('CMA_cmean', '1')),  # learning rate for the mean value
     'CMA_on': float(params.get('CMA_on', '1')),  # multiplier for all covariance matrix updates
     'CMA_rankmu': float(params.get('CMA_rankmu', '1')),  # multiplier for rank-mu update
     'CMA_rankone': float(params.get('CMA_rankone', '1')),  # multiplier for rank-one update
     "CSA_dampfac": float(params.get('CSA_dampfac', '1')),  #v positive multiplier for step-size damping, 0.3 is close to optimal on the sphere"
-    "popsize": float(params.get('popsize', '100')),  # population size, AKA lambda, int(popsize) is the number of new solution per iteration",
+    "popsize": int(params.get('popsize', '100')),  # population size, AKA lambda, int(popsize) is the number of new solution per iteration",
     "seed": seed, # random number seed for `numpy.random`; `None` and `0` equate to `time`, `np.nan` means \"do nothing\", see also option \"randn\""
-    "tolfun": float(params.get('tolfun', '1e-11')),  #v termination criterion: tolerance in function value, quite useful",
-    "timeout": 30*60
+    "tolfun": 10 ** float(params.get('tolfun', '-11')),  #v termination criterion: tolerance in function value, quite useful",
+    "timeout": 10
 }
+# turn off stdout
+sys.stdout = open('.\\null', 'w')
 
 res = cma.fmin2(func, np.ones(len(data.columns)), 10, options, args=(data, true_cost, 1_000_000))[0]
 
+# turn on stdout
+sys.stdout = sys.__stdout__
+
+print(func(res, data, true_cost, 1_000_000), end='')
+
 # save res to file res.csv
-np.savetxt(f'./res_{configuration_id}_{instance_id}_{seed}.csv', res, delimiter=',')
+# np.savetxt(f'./res_{configuration_id}_{instance_id}_{seed}.csv', res, delimiter=',')
 
-logger = Logger(og_data)
-func(res, data, true_cost, 1_000_000, logger=logger)
+# logger = Logger(og_data)
+# func(res, data, true_cost, 1_000_000, logger=logger)
 
-print(logger.logs)
+# print(logger.logs)
 
 # save logs to file logs.csv
-logger.logs.to_csv(f'./logs_{configuration_id}_{instance_id}_{seed}.csv', index=False)
+# logger.logs.to_csv(f'./logs_{configuration_id}_{instance_id}_{seed}.csv', index=False)

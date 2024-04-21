@@ -20,7 +20,7 @@
 
 :: Please change the EXE and FIXED_PARAMS to the correct ones
 SET "exe=python"
-SET "fixed_params=..\src\irace_test.py"
+SET "fixed_params=..\src\linear_combination.py"
 
 FOR /f "tokens=1-4*" %%a IN ("%*") DO (
 	SET candidate=%%a
@@ -38,7 +38,7 @@ SET "stderr=c%candidate%-%instance_id%-%seed%.stderr"
 
 :: Save  the output to a file, and parse the result from it.
 
-%exe% %fixed_params% -i %instance% --seed %seed% %candidate_parameters% 1>%stdout% 2>%stderr%
+%exe% %fixed_params% --instance %instance% --seed %seed% %candidate_parameters% 1>%stdout% 2>%stderr%
 
 :: read the resull from the stdout
 set /p cost=<%stdout%

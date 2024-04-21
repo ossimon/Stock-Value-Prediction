@@ -1,5 +1,0 @@
-mon: 3zł
-tue: 5zł
-wed: 4zł
-thu: 6zł
-fri: 4zł

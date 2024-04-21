@@ -8,7 +8,7 @@ Link z oryginalną isntrukcją: https://mlopez-ibanez.github.io/irace/
 
 1) Należy zainstalować R, a w nim pakiet irace (w przypadku posiadania R dobrze jest zaktualizować go do najnowszej wersji przed instalacją irace).
 2) Zarówno R, jak i irace powinny być w PATH!
-3) Aby użyć irace wystarczy przejść do katalogu irace/Instances i uruchomić w terminalu irace [katalog z irace]\bin\x64\irace.exe
+3) Aby użyć irace wystarczy przejść do katalogu \irace i uruchomić w terminalu irace [katalog z irace]\bin\x64\irace.exe
 
 Po wywołaniu komendy irace znajdzie plik `scenario.txt`, który przechowuje parametry wywołania algorytmu metaoptymalizacji (np. maksymalna liczba wywołań algorytmu).
 

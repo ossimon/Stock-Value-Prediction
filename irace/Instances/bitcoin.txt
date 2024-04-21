@@ -1,5 +1,0 @@
-mon: 3usd
-tue: 5usd
-wed: 4usd
-thu: 6usd
-fri: 4usd
