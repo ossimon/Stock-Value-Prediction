@@ -55,7 +55,7 @@ w roku 2023 przy *fee*=1% udało nam się uzyskać zysk na poziomie 11% co jest 
 
 Tutaj możemy zaobserować w akcji jedno z zoptymalizowanych rowiązań:
 
-![plot](./myplot.png)
+![plot](_img/myplot.png)
 
 Kolor czerwony oznacza sprzedanie części akcji, kolor zielony oznacza kupno części akcji. Jak widać algorytm kupuje akcje
 w minimach lokalnych a więc działa on dość dobrze. Zyska dla powyższego wykresu wynosił 8%.
