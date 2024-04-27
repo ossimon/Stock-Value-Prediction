@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 
-log_file = "../logs_1_1_1.csv"
+log_file = "../logs/EURUSD=X-2023-01-01-2024-01-01-42-logs.csv"
 
 df = pd.read_csv(log_file)
 
