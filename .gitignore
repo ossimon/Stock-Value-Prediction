@@ -8,3 +8,5 @@ irace_command.txt
 **/*.stderr
 
 **/outcmaes
+
+/outcmaes

@@ -1,1 +1,1 @@
-python .\src\linear_combination.py --i .\irace\Instances\usd_pln.csv --seed 0 --CMA_active_injected 0 --CMA_cmean 1 --CMA_on 1 --CMA_rankmu 1 --CMA_rankone 1 --CSA_dampfac 1 --popsize 100 --tolfun -11
+python .\src\linear_combination.py --instance .\irace\Instances\usd_pln.csv --seed 0 --CMA_active_injected 0 --CMA_cmean 1 --CMA_on 1 --CMA_rankmu 1 --CMA_rankone 1 --CSA_dampfac 1 --popsize 100 --tolfun -11

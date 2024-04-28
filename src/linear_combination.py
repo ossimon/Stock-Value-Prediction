@@ -188,7 +188,8 @@ options = {
     ** float(
         params.get("tolfun", "-11")
     ),  # v termination criterion: tolerance in function value, quite useful",
-    "timeout": 10,
+    "timeout": 10 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
+    "maxfevals": int(params.get("maxfevals", "10000")),  # v stop after maxfevals",
 }
 # turn off stdout
 sys.stdout = open(".\\null", "w")
