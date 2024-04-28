@@ -42,6 +42,7 @@ class Logger:
 
 seed = 0
 instance = "./src/data.csv"
+debug_mode = False
 
 # read the parameters
 params = {}
@@ -56,6 +57,8 @@ if "instance" in params:
     instance = params["instance"]
 if "seed" in params:
     seed = int(params["seed"])
+if "debug_mode" in params:
+    debug_mode = bool(params["debug_mode"])
 
 # read the instance
 data = pd.read_csv(instance)
@@ -100,18 +103,10 @@ for col1 in original_columns:
         new_columns.append(new_df)
 data = pd.concat(new_columns, axis=1)
 
-# normalize data to have values between 0 and 1
-# print(f'Num of columns: {len(data.columns)}')
-
 true_cost = data["close"]
 scaler = preprocessing.MinMaxScaler()
 data[data.columns] = scaler.fit_transform(data[data.columns])
 
-# print the first 5 rows of the data
-# print(data.head())
-
-
-# define the function to optimize
 def func(x, data, true_cost, budget=1_000_000, logger=None, fee=0.01):
     stocks = 0
     for index, row in data.iterrows():
@@ -191,25 +186,25 @@ options = {
     "timeout": 10 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
     "maxfevals": int(params.get("maxfevals", "10000")),  # v stop after maxfevals",
 }
+
 # turn off stdout
-sys.stdout = open(".\\null", "w")
+if not debug_mode:
+    sys.stdout = open(".\\null", "w")
 
 res = cma.fmin2(
-    func, np.ones(len(data.columns)), 10, options, args=(data, true_cost, 1_000_000)
+    func, np.ones(len(data.columns)), float(params.get("sigma", "100")), options, args=(data, true_cost, 1_000_000)
 )[0]
 
+
 # turn on stdout
-sys.stdout = sys.__stdout__
+if not debug_mode:
+    sys.stdout = sys.__stdout__
 
 print(func(res, data, true_cost, 1_000_000), end="")
 
-# save res to file res.csv
-# np.savetxt(f'./res_{configuration_id}_{instance_id}_{seed}.csv', res, delimiter=',')
-
-# logger = Logger(og_data)
-# func(res, data, true_cost, 1_000_000, logger=logger)
-
-# print(logger.logs)
-
-# save logs to file logs.csv
-# logger.logs.to_csv(f'./logs_{configuration_id}_{instance_id}_{seed}.csv', index=False)
+if debug_mode:
+    logger = Logger(og_data)
+    func(res, data, true_cost, 1_000_000, logger=logger)
+    # save logs to file logs.csv
+    file_name = instance.split('\\')[-1].split('.')[0]
+    logger.logs.to_csv(f'./logs/{file_name}-{seed}-logs.csv', index=False)
