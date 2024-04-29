@@ -4,8 +4,6 @@ import cma
 import sys
 import numpy as np
 from sklearn import preprocessing
-
-
 class Logger:
     def __init__(self, initial_data):
         self.logs = pd.DataFrame(
@@ -43,6 +41,8 @@ class Logger:
 seed = 0
 instance = "./src/data.csv"
 debug_mode = False
+sigma = 10
+default_params = False
 
 # read the parameters
 params = {}
@@ -53,12 +53,18 @@ for i in range(1, len(sys.argv)):
         i += 1
         params[param] = value
 
+
 if "instance" in params:
     instance = params["instance"]
 if "seed" in params:
     seed = int(params["seed"])
 if "debug_mode" in params:
     debug_mode = bool(params["debug_mode"])
+if "default_params" in params:
+    print('default params')
+    default_params = bool(params["default_params"])
+if "sigma" in params and not default_params:
+    sigma = float(params["sigma"])
 
 # read the instance
 data = pd.read_csv(instance)
@@ -159,40 +165,51 @@ def func(x, data, true_cost, budget=1_000_000, logger=None, fee=0.01):
     return -budget
 
 
-options = {
-    "CMA_active_injected": float(
-        params.get("CMA_active_injected", "0")
-    ),  # v weight multiplier for negative weights of injected solutions
-    "CMA_cmean": 10
-    ** float(params.get("CMA_cmean", "1")),  # learning rate for the mean value
-    "CMA_on": float(
-        params.get("CMA_on", "1")
-    ),  # multiplier for all covariance matrix updates
-    "CMA_rankmu": float(params.get("CMA_rankmu", "1")),  # multiplier for rank-mu update
-    "CMA_rankone": float(
-        params.get("CMA_rankone", "1")
-    ),  # multiplier for rank-one update
-    "CSA_dampfac": float(
-        params.get("CSA_dampfac", "1")
-    ),  # v positive multiplier for step-size damping, 0.3 is close to optimal on the sphere"
-    "popsize": int(
-        params.get("popsize", "100")
-    ),  # population size, AKA lambda, int(popsize) is the number of new solution per iteration",
-    "seed": seed,  # random number seed for `numpy.random`; `None` and `0` equate to `time`, `np.nan` means \"do nothing\", see also option \"randn\""
+if default_params:
+    options = {
+        "seed": seed,  # random number seed for `numpy.random`; `None` and `0` equate to `time`, `np.nan` means \"do nothing\", see also option \"randn\""
     "tolfun": 10
     ** float(
         params.get("tolfun", "-11")
     ),  # v termination criterion: tolerance in function value, quite useful",
     "timeout": 10 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
-    "maxfevals": int(params.get("maxfevals", "10000")),  # v stop after maxfevals",
+    "maxfevals": int(params.get("maxfevals", "3000")),  # v stop after maxfevals",
 }
+else:
+    options = {
+        "CMA_active_injected": float(
+            params.get("CMA_active_injected", "0")
+        ),  # v weight multiplier for negative weights of injected solutions
+        "CMA_cmean": 10
+        ** float(params.get("CMA_cmean", "1")),  # learning rate for the mean value
+        "CMA_on": float(
+            params.get("CMA_on", "1")
+        ),  # multiplier for all covariance matrix updates
+        "CMA_rankmu": float(params.get("CMA_rankmu", "1")),  # multiplier for rank-mu update
+        "CMA_rankone": float(
+            params.get("CMA_rankone", "0.5")
+        ),  # multiplier for rank-one update
+        "CSA_dampfac": float(
+            params.get("CSA_dampfac", "1")
+        ),  # v positive multiplier for step-size damping, 0.3 is close to optimal on the sphere"
+        "popsize": int(
+            params.get("popsize", "100")
+        ),  # population size, AKA lambda, int(popsize) is the number of new solution per iteration",
+        "seed": seed,  # random number seed for `numpy.random`; `None` and `0` equate to `time`, `np.nan` means \"do nothing\", see also option \"randn\""
+        "tolfun": 10
+        ** float(
+            params.get("tolfun", "-11")
+        ),  # v termination criterion: tolerance in function value, quite useful",
+        "timeout": 10 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
+        "maxfevals": int(params.get("maxfevals", "3000")),  # v stop after maxfevals",
+    }
 
 # turn off stdout
 if not debug_mode:
     sys.stdout = open(".\\null", "w")
 
 res = cma.fmin2(
-    func, np.ones(len(data.columns)), float(params.get("sigma", "100")), options, args=(data, true_cost, 1_000_000)
+    func, np.ones(len(data.columns)), sigma, options, args=(data, true_cost, 1_000_000)
 )[0]
 
 
