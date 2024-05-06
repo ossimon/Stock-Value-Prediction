@@ -172,8 +172,8 @@ if default_params:
     ** float(
         params.get("tolfun", "-11")
     ),  # v termination criterion: tolerance in function value, quite useful",
-    "timeout": 10 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
-    "maxfevals": int(params.get("maxfevals", "3000")),  # v stop after maxfevals",
+    "timeout": 20 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
+    "maxfevals": int(params.get("maxfevals", "10000")),  # v stop after maxfevals",
 }
 else:
     options = {
@@ -200,8 +200,8 @@ else:
         ** float(
             params.get("tolfun", "-11")
         ),  # v termination criterion: tolerance in function value, quite useful",
-        "timeout": 10 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
-        "maxfevals": int(params.get("maxfevals", "3000")),  # v stop after maxfevals",
+        "timeout": 20 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
+        "maxfevals": int(params.get("maxfevals", "10000")),  # v stop after maxfevals",
     }
 
 # turn off stdout
