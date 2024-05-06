@@ -43,6 +43,7 @@ instance = "./src/data.csv"
 debug_mode = False
 sigma = 10
 default_params = False
+max_evals = 100
 
 # read the parameters
 params = {}
@@ -173,7 +174,7 @@ if default_params:
         params.get("tolfun", "-11")
     ),  # v termination criterion: tolerance in function value, quite useful",
     "timeout": 20 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
-    "maxfevals": int(params.get("maxfevals", "10000")),  # v stop after maxfevals",
+    "maxfevals": int(params.get("maxfevals", max_evals)),  # v stop after maxfevals",
 }
 else:
     options = {
@@ -201,7 +202,7 @@ else:
             params.get("tolfun", "-11")
         ),  # v termination criterion: tolerance in function value, quite useful",
         "timeout": 20 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
-        "maxfevals": int(params.get("maxfevals", "10000")),  # v stop after maxfevals",
+        "maxfevals": int(params.get("maxfevals", max_evals)),  # v stop after maxfevals",
     }
 
 # turn off stdout
