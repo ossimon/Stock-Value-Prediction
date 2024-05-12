@@ -175,6 +175,7 @@ if default_params:
     ),  # v termination criterion: tolerance in function value, quite useful",
     "timeout": 20 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
     "maxfevals": int(params.get("maxfevals", max_evals)),  # v stop after maxfevals",
+    'AdaptSigma': cma.sigma_adaptation.CMAAdaptSigmaTPA
 }
 else:
     options = {
@@ -203,6 +204,7 @@ else:
         ),  # v termination criterion: tolerance in function value, quite useful",
         "timeout": 20 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
         "maxfevals": int(params.get("maxfevals", max_evals)),  # v stop after maxfevals",
+        'AdaptSigma': cma.sigma_adaptation.CMAAdaptSigmaTPA
     }
 
 # turn off stdout
