@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH --nodes 1
 #SBATCH --ntasks 31
-#SBATCH --time=30:00:00
-#SBATCH --partition=plgrid
+#SBATCH --time=00:10:00
+#SBATCH --partition=plgrid-testing
 #SBATCH --account=plgwtdydoptym-cpu
 
 module load r/4.2.0-foss-2021b

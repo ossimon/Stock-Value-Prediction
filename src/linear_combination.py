@@ -43,7 +43,8 @@ instance = "./src/data.csv"
 debug_mode = False
 sigma = 10
 default_params = False
-max_evals = 100
+max_evals = 10000
+timeout = 60 * 2
 
 # read the parameters
 params = {}
@@ -65,7 +66,7 @@ if "default_params" in params:
     print('default params')
     default_params = bool(params["default_params"])
 if "sigma" in params and not default_params:
-    sigma = float(params["sigma"])
+    sigma = 10 ** float(params["sigma"])
 
 # read the instance
 data = pd.read_csv(instance)
@@ -173,16 +174,16 @@ if default_params:
     ** float(
         params.get("tolfun", "-11")
     ),  # v termination criterion: tolerance in function value, quite useful",
-    "timeout": 20 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
+    "timeout": timeout,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
     "maxfevals": int(params.get("maxfevals", max_evals)),  # v stop after maxfevals",
+    # 'AdaptSigma': cma.sigma_adaptation.CMAAdaptSigmaTPA,
 }
 else:
     options = {
         "CMA_active_injected": float(
             params.get("CMA_active_injected", "0")
         ),  # v weight multiplier for negative weights of injected solutions
-        "CMA_cmean": 10
-        ** float(params.get("CMA_cmean", "1")),  # learning rate for the mean value
+        "CMA_cmean": 10 ** float(params.get("CMA_cmean", "1")),  # learning rate for the mean value
         "CMA_on": float(
             params.get("CMA_on", "1")
         ),  # multiplier for all covariance matrix updates
@@ -197,17 +198,21 @@ else:
             params.get("popsize", "100")
         ),  # population size, AKA lambda, int(popsize) is the number of new solution per iteration",
         "seed": seed,  # random number seed for `numpy.random`; `None` and `0` equate to `time`, `np.nan` means \"do nothing\", see also option \"randn\""
-        "tolfun": 10
-        ** float(
-            params.get("tolfun", "-11")
-        ),  # v termination criterion: tolerance in function value, quite useful",
-        "timeout": 20 * 60,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
+        "tolfun": 0,
+        # 10 **
+        # ** float(
+        #     params.get("tolfun", "-11")
+        # ),  # v termination criterion: tolerance in function value, quite useful",
+        "timeout": timeout,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
         "maxfevals": int(params.get("maxfevals", max_evals)),  # v stop after maxfevals",
+        # 'AdaptSigma': cma.sigma_adaptation.CMAAdaptSigmaTPA,
     }
 
 # turn off stdout
 if not debug_mode:
-    sys.stdout = open(".\\null", "w")
+    sys.stdout = open("./null", "w")
+    # sys.stderr = open("./null", "w")
+    
 
 res = cma.fmin2(
     func, np.ones(len(data.columns)), sigma, options, args=(data, true_cost, 1_000_000)
@@ -217,6 +222,7 @@ res = cma.fmin2(
 # turn on stdout
 if not debug_mode:
     sys.stdout = sys.__stdout__
+    sys.stderr = sys.__stderr__
 
 print(func(res, data, true_cost, 1_000_000), end="")
 

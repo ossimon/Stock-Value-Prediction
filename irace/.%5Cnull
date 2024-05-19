@@ -1,0 +1,9 @@
+(54_w,109)-aCMA-ES (mu_w=29.3,w_1=7%) in dimension 210 (seed=1043126593, Mon May 13 12:43:50 2024)
+Iterat #Fevals   function value  axis ratio  sigma  min&max std  t[m:s]
+    1    109 -1.033106948330689e+06 1.0e+00 8.19e+08  8e+08  8e+08 0:01.4
+termination on maxfevals=100 (Mon May 13 12:43:51 2024)
+final/bestever f-value = -1.023136e+06 -1.033107e+06 after 110/54 evaluations
+incumbent solution: [-1.63783640e+16 -1.49975065e+16  6.09538492e+16  1.70240761e+17
+  1.15431106e+17  4.50253777e+16 -1.32215914e+17  2.06946782e+17 ...]
+std deviations: [8.19128062e+08 8.19606110e+08 8.19727811e+08 8.18909748e+08
+ 8.19288691e+08 8.19082706e+08 8.19021707e+08 8.19705638e+08 ...]

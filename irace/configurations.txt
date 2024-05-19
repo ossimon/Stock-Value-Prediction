@@ -15,5 +15,9 @@
 ## param1 param2 mode   real mutation
 ## 5        NA    "x2"   2.0   "low"
 
-CMA_active_injected CMA_cmean   CMA_on  CMA_rankmu  CMA_rankone CSA_dampfac popsize tolfun sigma
-0                   1           1       1           1           1           100     -11     0.1
+CMA_active_injected CMA_cmean   CMA_on  CMA_rankmu  CMA_rankone CSA_dampfac popsize sigma
+18.8724   -0.8478  49.0244     0.7805      0.4287     52.9497     998 7.4576
+87.0413   -1.0587 -32.6253     0.4909      0.4708     31.7904     386 8.7181
+25.1968   -1.0036  52.7389     0.5915      0.6054     59.4093     916 8.3111
+99.3896   -0.9659 -24.2305     0.4118      0.4979     34.4194     435 8.3660
+92.1243   -1.0624 -47.4176     0.4801      0.5238     25.5887     465 8.1283

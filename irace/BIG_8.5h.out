@@ -1,0 +1,409 @@
+ gcccore/11.2.0 loaded.
+ zlib/1.2.11-gcccore-11.2.0 loaded.
+ binutils/2.37-gcccore-11.2.0 loaded.
+ gcc/11.2.0 loaded.
+ numactl/2.0.14-gcccore-11.2.0 loaded.
+ xz/5.2.5-gcccore-11.2.0 loaded.
+ libxml2/2.9.10-gcccore-11.2.0 loaded.
+ libpciaccess/0.16-gcccore-11.2.0 loaded.
+ hwloc/2.5.0-gcccore-11.2.0 loaded.
+ openssl/1.1 loaded.
+ libevent/2.1.12-gcccore-11.2.0 loaded.
+ ucx/1.11.2-gcccore-11.2.0 loaded.
+ libfabric/1.13.2-gcccore-11.2.0 loaded.
+ pmix/4.1.0-gcccore-11.2.0 loaded.
+ openmpi/4.1.1-gcc-11.2.0 loaded.
+ openblas/0.3.17-gcc-11.2.0 loaded.
+ flexiblas/3.0.4-gcc-11.2.0 loaded.
+ gompi/2021b loaded.
+ fftw/3.3.10-gompi-2021b loaded.
+ scalapack/2.1.0-gompi-2021b-fb loaded.
+ foss/2021b loaded.
+ bzip2/1.0.8-gcccore-11.2.0 loaded.
+ expat/2.4.1-gcccore-11.2.0 loaded.
+ libpng/1.6.37-gcccore-11.2.0 loaded.
+ brotli/1.0.9-gcccore-11.2.0 loaded.
+ freetype/2.11.0-gcccore-11.2.0 loaded.
+ ncurses/6.2-gcccore-11.2.0 loaded.
+ util-linux/2.37-gcccore-11.2.0 loaded.
+ fontconfig/2.13.94-gcccore-11.2.0 loaded.
+ xorg-macros/1.19.3-gcccore-11.2.0 loaded.
+ x11/20210802-gcccore-11.2.0 loaded.
+ gzip/1.10-gcccore-11.2.0 loaded.
+ lz4/1.9.3-gcccore-11.2.0 loaded.
+ zstd/1.5.0-gcccore-11.2.0 loaded.
+ libdrm/2.4.107-gcccore-11.2.0 loaded.
+ libglvnd/1.3.3-gcccore-11.2.0 loaded.
+ libunwind/1.5.0-gcccore-11.2.0 loaded.
+ llvm/12.0.1-gcccore-11.2.0 loaded.
+ mesa/21.1.7-gcccore-11.2.0 loaded.
+ libglu/9.0.2-gcccore-11.2.0 loaded.
+ pixman/0.40.0-gcccore-11.2.0 loaded.
+ libffi/3.4.2-gcccore-11.2.0 loaded.
+ gettext/0.21-gcccore-11.2.0 loaded.
+ pcre/8.45-gcccore-11.2.0 loaded.
+ glib/2.69.1-gcccore-11.2.0 loaded.
+ cairo/1.16.0-gcccore-11.2.0 loaded.
+ libreadline/8.1-gcccore-11.2.0 loaded.
+ tcl/8.6.11-gcccore-11.2.0 loaded.
+ sqlite/3.36-gcccore-11.2.0 loaded.
+ pcre2/10.37-gcccore-11.2.0 loaded.
+ nasm/2.15.05-gcccore-11.2.0 loaded.
+ libjpeg-turbo/2.0.6-gcccore-11.2.0 loaded.
+ jbigkit/2.1-gcccore-11.2.0 loaded.
+ libtiff/4.3.0-gcccore-11.2.0 loaded.
+ java/11.0.2 loaded.
+ tk/8.6.11-gcccore-11.2.0 loaded.
+ curl/7.78.0-gcccore-11.2.0 loaded.
+ gmp/6.2.1-gcccore-11.2.0 loaded.
+ nlopt/2.7.0-gcccore-11.2.0 loaded.
+ libogg/1.3.5-gcccore-11.2.0 loaded.
+ flac/1.3.3-gcccore-11.2.0 loaded.
+ libvorbis/1.3.7-gcccore-11.2.0 loaded.
+ libsndfile/1.0.31-gcccore-11.2.0 loaded.
+ icu/69.1-gcccore-11.2.0 loaded.
+ szip/2.1.1-gcccore-11.2.0 loaded.
+ hdf5/1.12.1-gompi-2021b loaded.
+ udunits/2.2.28-gcccore-11.2.0 loaded.
+ gsl/2.7-gcc-11.2.0 loaded.
+ ghostscript/9.54.0-gcccore-11.2.0 loaded.
+ jasper/2.0.33-gcccore-11.2.0 loaded.
+ littlecms/2.12-gcccore-11.2.0 loaded.
+ imagemagick/7.1.0-4-gcccore-11.2.0 loaded.
+ glpk/5.0-gcccore-11.2.0 loaded.
+ nodejs/14.17.6-gcccore-11.2.0 loaded.
+ python/3.9.6-gcccore-11.2.0 loaded.
+ netcdf/4.8.1-gompi-2021b loaded.
+ geos/3.9.1-gcc-11.2.0 loaded.
+ proj/8.1.0-gcccore-11.2.0 loaded.
+ libgeotiff/1.7.0-gcccore-11.2.0 loaded.
+ pybind11/2.7.1-gcccore-11.2.0 loaded.
+ scipy-bundle/2021.10-foss-2021b loaded.
+ libtirpc/1.3.2-gcccore-11.2.0 loaded.
+ hdf/4.2.15-gcccore-11.2.0 loaded.
+ openjpeg/2.4.0-gcccore-11.2.0 loaded.
+ boost/1.77.0-gcc-11.2.0 loaded.
+ gdal/3.3.2-foss-2021b loaded.
+ mpfr/4.1.0-gcccore-11.2.0 loaded.
+ libgit2/1.1.1-gcccore-11.2.0 loaded.
+ r/4.2.0-foss-2021b loaded.
+ python/3.9.6-gcccore-11.2.0 unloaded.
+ python/3.9.6-gcccore-11.2.0 loaded.
+#------------------------------------------------------------------------------
+# irace: An implementation in R of (Elitist) Iterated Racing
+# Version: 3.5.6863679
+# Copyright (C) 2010-2020
+# Manuel Lopez-Ibanez     <manuel.lopez-ibanez@manchester.ac.uk>
+# Jeremie Dubois-Lacoste  
+# Leslie Perez Caceres    <leslie.perez.caceres@ulb.ac.be>
+#
+# This is free software, and you are welcome to redistribute it under certain
+# conditions.  See the GNU General Public License for details. There is NO
+# WARRANTY; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# irace builds upon previous code from the race package:
+#     race: Racing methods for the selection of the best
+#     Copyright (C) 2003 Mauro Birattari
+#------------------------------------------------------------------------------
+# installed at: /net/software/testing/software/R/4.2.0-foss-2021b/lib64/R/library/irace
+# called with: 
+== irace == WARNING: A default scenario file '/net/people/plgrid/plgosimon/inteligencja_obliczeniowa/Stock-Value-Prediction/irace/scenario.txt' has been found and will be read.
+# 2024-05-15 16:28:54 CEST: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 5
+# minNbSurvival: 5
+# nbParameters: 8
+# seed: 63726215
+# confidence level: 0.95
+# budget: 2000
+# mu: 5
+# deterministic: FALSE
+
+# 2024-05-15 16:28:54 CEST: Iteration 1 of 5
+# experimentsUsedSoFar: 0
+# remainingBudget: 2000
+# currentBudget: 400
+# nbConfigurations: 66
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          1|         66|          1|    -1052561.705|         66|00:12:12|   NA|  NA|    NA|
+|x|          2|         66|         16|    -1045748.953|        132|00:12:06|+0.90|0.95|0.1349|
+|x|          3|         66|         16|    -1043478.036|        198|00:12:19|+0.89|0.93|0.1163|
+|x|          4|         66|         16|    -1042342.577|        264|00:12:12|+0.89|0.91|0.1257|
+|-|          5|         19|         45|    -1041661.302|        330|00:12:13|-0.02|0.18|0.9072|
+|=|          6|         19|         45|    -1041207.119|        349|00:04:16|+0.03|0.19|0.8207|
+|=|          7|         19|         45|    -1040882.702|        368|00:04:17|+0.02|0.16|0.7215|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:          45    mean value:     -1040882.702
+Description of the best-so-far configuration:
+   .ID. CMA_active_injected CMA_cmean CMA_on CMA_rankmu CMA_rankone CSA_dampfac popsize sigma .PARENT.
+45   45             73.9583   -0.8383 43.751     0.5047      0.4835      9.7934     548 8.718       NA
+
+# 2024-05-15 17:38:33 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   CMA_active_injected CMA_cmean   CMA_on CMA_rankmu CMA_rankone CSA_dampfac popsize  sigma
+45             73.9583   -0.8383  43.7510     0.5047      0.4835      9.7934     548 8.7180
+47             -0.6809   -0.5808  39.4841     0.8308      0.0053     25.1876     710 6.8336
+16             69.7450   -1.6792 -21.9065     0.8894      0.7365     26.9226     498 7.9941
+44             -9.5381    0.5319 -12.1765     0.8443      0.0661      9.4973     568 6.8772
+21             55.2131    7.9955 -80.5567     0.9490      0.3537      9.4908     975 7.1082
+# 2024-05-15 17:38:33 CEST: Iteration 2 of 5
+# experimentsUsedSoFar: 368
+# remainingBudget: 1632
+# currentBudget: 408
+# nbConfigurations: 55
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          8|         55|         47|    -1044763.264|         55|00:11:54|   NA|  NA|    NA|
+|x|          6|         55|         90|    -1053022.787|        105|00:11:02|+0.82|0.91|0.1956|
+|x|          7|         55|         90|    -1048327.258|        155|00:10:50|+0.86|0.91|0.1673|
+|x|          4|         55|         90|    -1045979.494|        205|00:10:33|+0.85|0.89|0.1661|
+|-|          1|         19|         67|    -1045801.243|        255|00:10:39|-0.02|0.18|0.7828|
+|=|          5|         19|        103|    -1042773.215|        269|00:04:13|+0.01|0.18|0.7643|
+|=|          2|         19|        103|    -1042225.071|        283|00:04:18|+0.05|0.19|0.7536|
+|=|          3|         19|         67|    -1044438.375|        297|00:04:14|+0.06|0.18|0.7629|
+|-|          9|          6|         67|    -1044057.523|        316|00:04:28|-0.05|0.06|0.6961|
+|=|         10|          6|         67|    -1043545.391|        322|00:02:12|-0.05|0.06|0.6217|
+|=|         11|          6|         67|    -1043429.549|        328|00:02:10|+0.00|0.09|0.6142|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:          67    mean value:     -1043429.549
+Description of the best-so-far configuration:
+   .ID. CMA_active_injected CMA_cmean   CMA_on CMA_rankmu CMA_rankone CSA_dampfac popsize  sigma .PARENT.
+67   67             92.1243   -1.0624 -47.4176     0.4801      0.5238     25.5887     465 8.1283       16
+
+# 2024-05-15 18:55:11 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    CMA_active_injected CMA_cmean   CMA_on CMA_rankmu CMA_rankone CSA_dampfac popsize  sigma
+67              92.1243   -1.0624 -47.4176     0.4801      0.5238     25.5887     465 8.1283
+95              99.7644    0.1954 -32.3484     0.5551      0.6697     13.6882     586 7.5926
+103             27.9455   -1.2517  55.6097     0.5691      0.7044     77.5895     987 8.0154
+90              89.0646   -1.6214   7.7313     0.8844      0.3789     28.4315     385 8.7950
+108             67.1739   -1.7079 -35.9954     0.3449      0.4364     30.0646     242 8.2828
+# 2024-05-15 18:55:11 CEST: Iteration 3 of 5
+# experimentsUsedSoFar: 696
+# remainingBudget: 1304
+# currentBudget: 434
+# nbConfigurations: 40
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|         12|         40|        103|    -1041368.789|         40|00:08:59|   NA|  NA|    NA|
+|x|          7|         40|        148|    -1045258.916|         75|00:08:03|+0.63|0.82|0.3300|
+|x|          4|         40|        148|    -1043151.344|        110|00:07:43|+0.65|0.76|0.2825|
+|x|          3|         40|        148|    -1051076.672|        145|00:07:38|+0.67|0.75|0.3462|
+|-|          6|          6|        148|    -1049135.096|        180|00:07:24|+0.14|0.31|0.6034|
+|=|          2|          6|        148|    -1047435.280|        181|00:01:17|+0.00|0.17|0.7252|
+|=|         10|          6|        148|    -1046221.126|        182|00:01:17|+0.00|0.15|0.6172|
+|=|         11|          6|        148|    -1045310.510|        183|00:01:17|-0.00|0.12|0.6525|
+|=|          8|          6|        148|    -1044602.254|        184|00:01:16|-0.00|0.11|0.5769|
+|=|          5|          6|        148|    -1044035.648|        185|00:01:18|-0.00|0.10|0.5171|
+|=|          9|          6|        148|    -1043572.062|        186|00:01:17|+0.00|0.09|0.5380|
+|=|          1|          6|        148|    -1044321.199|        187|00:01:17|+0.02|0.11|0.5553|
+|=|         13|          6|         67|    -1043349.654|        193|00:02:11|+0.05|0.12|0.5578|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:          67    mean value:     -1043349.654
+Description of the best-so-far configuration:
+   .ID. CMA_active_injected CMA_cmean   CMA_on CMA_rankmu CMA_rankone CSA_dampfac popsize  sigma .PARENT.
+67   67             92.1243   -1.0624 -47.4176     0.4801      0.5238     25.5887     465 8.1283       16
+
+# 2024-05-15 19:46:14 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    CMA_active_injected CMA_cmean   CMA_on CMA_rankmu CMA_rankone CSA_dampfac popsize  sigma
+67              92.1243   -1.0624 -47.4176     0.4801      0.5238     25.5887     465 8.1283
+148             13.4031   -0.1922  41.6014     0.6537      0.5604     58.2069     969 8.8161
+103             27.9455   -1.2517  55.6097     0.5691      0.7044     77.5895     987 8.0154
+90              89.0646   -1.6214   7.7313     0.8844      0.3789     28.4315     385 8.7950
+95              99.7644    0.1954 -32.3484     0.5551      0.6697     13.6882     586 7.5926
+# 2024-05-15 19:46:14 CEST: Iteration 4 of 5
+# experimentsUsedSoFar: 889
+# remainingBudget: 1111
+# currentBudget: 555
+# nbConfigurations: 44
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|         14|         44|        189|    -1041669.060|         44|00:11:05|   NA|  NA|    NA|
+|x|          4|         44|        158|    -1040523.601|         83|00:10:00|+0.23|0.61|0.9089|
+|x|          8|         44|        158|    -1044531.951|        122|00:09:52|+0.26|0.50|0.6694|
+|x|          7|         44|        158|    -1043133.013|        161|00:09:53|+0.21|0.40|0.7969|
+|-|          3|         17|        158|    -1043241.198|        200|00:09:50|-0.08|0.14|0.9728|
+|=|          2|         17|        158|    -1042523.699|        212|00:04:01|-0.05|0.12|0.9347|
+|=|         13|         17|        158|    -1042011.199|        224|00:04:01|-0.04|0.11|0.9527|
+|=|          1|         17|        177|    -1044331.030|        236|00:03:59|+0.01|0.14|0.9112|
+|=|          5|         17|        177|    -1043731.605|        248|00:03:59|+0.02|0.13|0.9086|
+|=|         12|         17|        148|    -1045154.940|        260|00:04:03|+0.01|0.11|0.9319|
+|=|         11|         17|        158|    -1042713.211|        272|00:04:02|+0.02|0.11|0.9180|
+|=|          9|         17|        158|    -1042398.460|        284|00:04:02|+0.02|0.10|0.9096|
+|=|          6|         17|        163|    -1042477.154|        296|00:04:00|+0.03|0.11|0.9178|
+|=|         10|         17|        163|    -1042224.229|        308|00:04:01|+0.03|0.10|0.9175|
+|=|         15|         17|        148|    -1043406.372|        325|00:04:53|+0.04|0.10|0.9076|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:         148    mean value:     -1043406.372
+Description of the best-so-far configuration:
+    .ID. CMA_active_injected CMA_cmean  CMA_on CMA_rankmu CMA_rankone CSA_dampfac popsize  sigma .PARENT.
+148  148             13.4031   -0.1922 41.6014     0.6537      0.5604     58.2069     969 8.8161      103
+
+# 2024-05-15 21:18:04 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    CMA_active_injected CMA_cmean   CMA_on CMA_rankmu CMA_rankone CSA_dampfac popsize  sigma
+148             13.4031   -0.1922  41.6014     0.6537      0.5604     58.2069     969 8.8161
+163             32.5868   -1.6953  56.8947     0.6406      0.5967     78.0807     904 7.3411
+67              92.1243   -1.0624 -47.4176     0.4801      0.5238     25.5887     465 8.1283
+189             25.1968   -1.0036  52.7389     0.5915      0.6054     59.4093     916 8.3111
+158              9.4100   -1.2364  47.8196     0.6526      0.6275     76.3477     952 8.3025
+# 2024-05-15 21:18:04 CEST: Iteration 5 of 5
+# experimentsUsedSoFar: 1214
+# remainingBudget: 786
+# currentBudget: 786
+# nbConfigurations: 53
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|         16|         53|        214|    -1043308.347|         53|00:14:53|   NA|  NA|    NA|
+|x|          9|         53|        214|    -1041122.274|        101|00:12:33|-0.08|0.46|1.0536|
+|x|          7|         53|        163|    -1042070.450|        149|00:12:46|-0.01|0.33|1.0017|
+|x|         14|         53|        163|    -1041286.887|        197|00:12:36|-0.02|0.24|1.0148|
+|=|         10|         53|        163|    -1040816.750|        245|00:12:43|+0.00|0.20|1.0078|
+|=|         11|         53|        194|    -1041892.088|        293|00:12:39|+0.01|0.18|0.9931|
+|=|          2|         53|        163|    -1041783.826|        341|00:12:49|+0.02|0.16|0.9654|
+|=|         13|         53|         67|    -1040605.888|        389|00:12:51|+0.05|0.17|0.9411|
+|=|         12|         53|         67|    -1040420.368|        437|00:12:35|+0.04|0.15|0.9469|
+|-|          8|         29|        163|    -1041733.101|        485|00:12:48|-0.06|0.05|0.9945|
+|=|          6|         29|        163|    -1041882.282|        509|00:07:02|-0.03|0.07|0.9801|
+|=|          4|         29|        163|    -1041636.775|        533|00:07:00|-0.03|0.06|0.9784|
+|=|          5|         29|        163|    -1041429.039|        557|00:06:57|-0.02|0.05|0.9766|
+|=|         15|         29|        218|    -1041552.550|        581|00:07:00|-0.03|0.05|0.9833|
+|=|          3|         29|        218|    -1042052.919|        605|00:06:59|-0.01|0.06|0.9788|
+|=|          1|         29|        218|    -1042996.862|        629|00:06:57|+0.00|0.07|0.9740|
+|=|         17|         29|        218|    -1042758.000|        658|00:07:42|+0.01|0.06|0.9744|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:         218    mean value:     -1042758.000
+Description of the best-so-far configuration:
+    .ID. CMA_active_injected CMA_cmean  CMA_on CMA_rankmu CMA_rankone CSA_dampfac popsize  sigma .PARENT.
+218  218             18.8724   -0.8478 49.0244     0.7805      0.4287     52.9497     998 7.4576      148
+
+# 2024-05-16 00:17:02 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    CMA_active_injected CMA_cmean   CMA_on CMA_rankmu CMA_rankone CSA_dampfac popsize  sigma
+218             18.8724   -0.8478  49.0244     0.7805      0.4287     52.9497     998 7.4576
+189             25.1968   -1.0036  52.7389     0.5915      0.6054     59.4093     916 8.3111
+67              92.1243   -1.0624 -47.4176     0.4801      0.5238     25.5887     465 8.1283
+148             13.4031   -0.1922  41.6014     0.6537      0.5604     58.2069     969 8.8161
+230             99.3896   -0.9659 -24.2305     0.4118      0.4979     34.4194     435 8.3660
+# 2024-05-16 00:17:02 CEST: Iteration 6 of 6
+# experimentsUsedSoFar: 1872
+# remainingBudget: 128
+# currentBudget: 128
+# nbConfigurations: 11
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|         18|         11|        189|    -1043136.646|         11|00:03:38|   NA|  NA|    NA|
+|x|          5|         11|        189|    -1041036.424|         17|00:02:12|-0.10|0.45|1.0000|
+|x|         13|         11|        243|    -1047052.117|         23|00:02:10|+0.04|0.36|0.9419|
+|x|          6|         11|         67|    -1046098.142|         29|00:02:13|+0.03|0.27|0.9177|
+|=|         17|         11|        241|    -1049476.994|         35|00:02:11|-0.08|0.13|0.9307|
+|=|         16|         11|        241|    -1047720.195|         41|00:02:11|-0.06|0.11|0.9176|
+|=|          2|         11|        189|    -1040231.290|         47|00:02:12|-0.04|0.11|0.9005|
+|=|         14|         11|        189|    -1040411.011|         53|00:02:12|-0.01|0.11|0.8881|
+|=|         10|         11|        189|    -1040517.431|         59|00:02:13|+0.04|0.14|0.8547|
+|=|          3|         11|        189|    -1041314.161|         65|00:02:11|+0.05|0.14|0.8686|
+|=|          8|         11|        189|    -1041097.983|         71|00:02:10|+0.05|0.14|0.8817|
+|=|         15|         11|        189|    -1041120.550|         77|00:02:13|+0.05|0.13|0.8930|
+|=|         12|         11|        218|    -1042532.414|         83|00:02:11|+0.06|0.13|0.8827|
+|=|         11|         11|        218|    -1042275.542|         89|00:02:12|+0.05|0.11|0.8836|
+|=|          1|         11|        218|    -1043267.573|         95|00:02:11|+0.03|0.10|0.9012|
+|=|          7|         11|        218|    -1042996.862|        101|00:02:10|+0.03|0.09|0.9064|
+|=|          4|         11|        218|    -1042758.000|        107|00:02:12|+0.02|0.08|0.9040|
+|=|          9|         11|        218|    -1042545.678|        113|00:02:14|+0.02|0.07|0.9041|
+|=|         19|         11|        218|    -1042355.705|        124|00:03:38|+0.02|0.07|0.8970|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:         218    mean value:     -1042355.705
+Description of the best-so-far configuration:
+    .ID. CMA_active_injected CMA_cmean  CMA_on CMA_rankmu CMA_rankone CSA_dampfac popsize  sigma .PARENT.
+218  218             18.8724   -0.8478 49.0244     0.7805      0.4287     52.9497     998 7.4576      148
+
+# 2024-05-16 01:01:47 CEST: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    CMA_active_injected CMA_cmean   CMA_on CMA_rankmu CMA_rankone CSA_dampfac popsize  sigma
+218             18.8724   -0.8478  49.0244     0.7805      0.4287     52.9497     998 7.4576
+241             87.0413   -1.0587 -32.6253     0.4909      0.4708     31.7904     386 8.7181
+189             25.1968   -1.0036  52.7389     0.5915      0.6054     59.4093     916 8.3111
+230             99.3896   -0.9659 -24.2305     0.4118      0.4979     34.4194     435 8.3660
+67              92.1243   -1.0624 -47.4176     0.4801      0.5238     25.5887     465 8.1283
+# 2024-05-16 01:01:47 CEST: Stopped because there is not enough budget left to race more than the minimum (5)
+# You may either increase the budget or set 'minNbSurvival' to a lower value
+# Iteration: 7
+# nbIterations: 7
+# experimentsUsedSoFar: 1996
+# timeUsed: 0
+# remainingBudget: 4
+# currentBudget: 4
+# number of elites: 5
+# nbConfigurations: 4
+# Total CPU user time: 308388.4, CPU sys time: 5157.207, Wall-clock time: 30772.59
+# Best configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    CMA_active_injected CMA_cmean   CMA_on CMA_rankmu CMA_rankone CSA_dampfac popsize  sigma
+218             18.8724   -0.8478  49.0244     0.7805      0.4287     52.9497     998 7.4576
+241             87.0413   -1.0587 -32.6253     0.4909      0.4708     31.7904     386 8.7181
+189             25.1968   -1.0036  52.7389     0.5915      0.6054     59.4093     916 8.3111
+230             99.3896   -0.9659 -24.2305     0.4118      0.4979     34.4194     435 8.3660
+67              92.1243   -1.0624 -47.4176     0.4801      0.5238     25.5887     465 8.1283
+# Best configurations as commandlines (first number is the configuration ID; same order as above):
+218  --CMA_active_injected 18.8724 --CMA_cmean -0.8478 --CMA_on 49.0244 --CMA_rankmu 0.7805 --CMA_rankone 0.4287 --CSA_dampfac 52.9497 --popsize 998 --sigma 7.4576
+241  --CMA_active_injected 87.0413 --CMA_cmean -1.0587 --CMA_on -32.6253 --CMA_rankmu 0.4909 --CMA_rankone 0.4708 --CSA_dampfac 31.7904 --popsize 386 --sigma 8.7181
+189  --CMA_active_injected 25.1968 --CMA_cmean -1.0036 --CMA_on 52.7389 --CMA_rankmu 0.5915 --CMA_rankone 0.6054 --CSA_dampfac 59.4093 --popsize 916 --sigma 8.3111
+230  --CMA_active_injected 99.3896 --CMA_cmean -0.9659 --CMA_on -24.2305 --CMA_rankmu 0.4118 --CMA_rankone 0.4979 --CSA_dampfac 34.4194 --popsize 435 --sigma 8.366
+67   --CMA_active_injected 92.1243 --CMA_cmean -1.0624 --CMA_on -47.4176 --CMA_rankmu 0.4801 --CMA_rankone 0.5238 --CSA_dampfac 25.5887 --popsize 465 --sigma 8.1283
+
+
+# Testing of elite configurations: 1 
+# Testing iteration configurations: FALSE 
+# 2024-05-16 01:01:47 CEST: No test instances, skip testing
+Runtime: 30773 seconds

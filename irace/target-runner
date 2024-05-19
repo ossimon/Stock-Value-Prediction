@@ -44,12 +44,15 @@ fi
 
 # # If the program just prints a number, we can use 'exec' to avoid creating
 # # another process, but there can be no other commands after exec, only exit.
-exec $EXE ${EXE_PARAMS}
+exec $EXE ${EXE_PARAMS} # | tail -n 1 | grep -e '^[[:space:]]*[+-]\?[0-9]' | cut -f1
 exit 1
 
 # These files are saved in execDir. Saving them in /tmp may be faster. 
-STDOUT=c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stdout
-STDERR=c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stderr
+STDOUT=/tmp/c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stdout
+STDERR=/tmp/c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stderr
+
+# touch ${STDOUT}
+# touch ${STDERR}
 
 # # Otherwise, save the output to a file, and parse the result from it.  (If
 # # you wish to ignore segmentation faults you can use '{}' around the
