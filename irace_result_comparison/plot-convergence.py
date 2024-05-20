@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the data
-default_params = pd.read_csv('../reports/data/default_params-usd-eur-23-24-200000-evals.csv')
-irace_optimized = pd.read_csv('../reports/data/meta_prams-usd-eur-23-24-200000-evals.csv')
+default_params = pd.read_csv('./default_params-usd-jpy-22-24.csv')
+irace_optimized = pd.read_csv('./meta_params-usd-jpy-22-24.csv')
 default_x = default_params['evaluation']
 print(default_params.columns)
 default_y = -1 * default_params['bestever'] - 1e6

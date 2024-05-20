@@ -152,3 +152,59 @@ Dodajmy do wykresu linie wyznaczającą liczbę 10k ewaluacji użytych w irace:
 ![img](./_img/usd-eur-23-24-con-200000-eval-line.png)
 
 Jak widać domyślne parametery okazują się być dużo skuteczniejsze niż parametery zoptymalizowane przez irace. Widzimy także wpływ wybranej liczby ewaluacji do trenowania irace na uzyskany wynik.
+
+### Testy na innej walucie oraz innym okresie
+
+Poniższe testy zostały wykonane na kusrie USD/JPY w okresie 01.01.2022 - 01.01.2024
+
+### Domyślne parametery
+
+Uzyskany wynik:
+
+> 1_221_018 USD
+
+Czas trwania:
+
+> 15:00.00 s
+
+Ilość iteracji i ewaluacji
+
+> Iter: 2648
+> Eval: 52960
+
+Wizualizacja:
+
+![img](./_img/usd-jpy-22-24-def.png)
+
+### Meta parametery
+
+Uzyskany wynik:
+
+> 1_409_908 USD
+
+Czas trwania:
+
+> 15:00.0 s
+
+Ilość iteracji i ewaluacji
+
+> Iter: 32
+> Eval: 53984
+
+Wizualizacja:
+
+![img](./_img/usd-jpy-22-24-meta.png)
+
+### Porównanie wyników
+
+![img](./_img/usd-jpy-22-24-con.png)
+
+W przypadku kursu Dolar/Yen uzyskaliśmy większy wynik w przypadku parametrów zoptymalizowanych
+
+### Wnioski
+
+Jak widać uzyskane wyniki róźnią się znacznie w zależności od wybranej waluty oraz okresu.
+
+Największym wyzwaniem okazało się dobranie odpowiedniej ilości ewaluacji. Zwiększenie tej wartości znacznie wydłuża proces trenowania parametrów. Z drugiej strony przy małej ilości optymalizacji Irace nie gwarantuje znalezienia parametrów które bedą się sprawdzać także przy większej liczby iteracji. W naszym przypadku, możemy zauważyć że Irace bardzo szybko znajduję dobre wyniki, natomiast nie potrafi on wyjść z znalezionego minimum lokalnego.
+
+Można zatem wyciągnąć wnioski, iż nie da się stwierdzić czy metaoptymalizacja dla danego problemu przyniesie korzyści. W przypadku pierwszego kursu, wyniki uzyskane po metaoptymalizacji nie są w stanie usprawiedliwić czas poświęcony na uruchomienie algorytmu irace (11h), w tej sytuacji dużo lepsze wyniki uzyskujemy przez uruchomienie CMA-ES na 15 minut z defaultowymi parametrami. Z drugiej strony w przypadku kursu Dollar/Yen, metaoptymalizacja dała dużo lepszy wynik, co więcej nie wygląda na to by CMA-ES z domyślnymi parametrami miał uzyskać lepszy w wynik w większej ilości ewaluacji. Jest to miłe zaskoczenie, gdyż Irace nie korzystał z tego kursu

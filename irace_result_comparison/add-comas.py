@@ -7,5 +7,5 @@ def add_comas(input_file_name, output_file_name):
             else:
                 outfile.write(','.join(line.split()) + '\n')
 
-add_comas('default.csv', '../reports/data/default_params-usd-eur-23-24-200000-evals.csv')
-add_comas('meta.csv', '../reports/data/meta_prams-usd-eur-23-24-200000-evals.csv')
+add_comas('default.csv', './default_params-usd-jpy-22-24.csv')
+add_comas('meta.csv', './meta_params-usd-jpy-22-24.csv')
