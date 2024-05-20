@@ -44,7 +44,7 @@ debug_mode = False
 sigma = 10
 default_params = False
 max_evals = 10000
-timeout = 60 * 2
+timeout = 60 * 15
 
 # read the parameters
 params = {}
@@ -170,12 +170,9 @@ def func(x, data, true_cost, budget=1_000_000, logger=None, fee=0.01):
 if default_params:
     options = {
         "seed": seed,  # random number seed for `numpy.random`; `None` and `0` equate to `time`, `np.nan` means \"do nothing\", see also option \"randn\""
-    "tolfun": 10
-    ** float(
-        params.get("tolfun", "-11")
-    ),  # v termination criterion: tolerance in function value, quite useful",
+    "tolfun": 0,
     "timeout": timeout,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
-    "maxfevals": int(params.get("maxfevals", max_evals)),  # v stop after maxfevals",
+    "maxfevals": int(params.get("maxfevals", max_evals))*20,  # v stop after maxfevals",
     # 'AdaptSigma': cma.sigma_adaptation.CMAAdaptSigmaTPA,
 }
 else:
@@ -204,7 +201,7 @@ else:
         #     params.get("tolfun", "-11")
         # ),  # v termination criterion: tolerance in function value, quite useful",
         "timeout": timeout,  # v stop after timeout seconds, see also options \"tolfun\" and \"tolx\"",
-        "maxfevals": int(params.get("maxfevals", max_evals)),  # v stop after maxfevals",
+        "maxfevals": int(params.get("maxfevals", max_evals))*20,  # v stop after maxfevals",
         # 'AdaptSigma': cma.sigma_adaptation.CMAAdaptSigmaTPA,
     }
 
