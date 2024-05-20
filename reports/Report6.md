@@ -2,7 +2,18 @@
 
 ## Metaoptymalizacja na Aresie
 
-TODO Oskar
+Metaoptymalizacja na Aresie okazała się najbardziej czasochłonnym zadaniem w tym projekcie. Największymi trudnościamy były: przygotowanie środowiska do uruchamiania eksperymentów, modyfikacja kodu, aby był kompatybilny z systemem Aresa oraz pisanie, testowanie i wykonanie skryptów z eksperymentami. Te czynności zajęły pierwszy tydzień pracy.
+
+Kilka razy eksperymenty okazywały się niewypałami, np. przez to, że CMA wyrzucało warningi, które przerywały pracę irace.
+
+Zużywany czas na Aresie okazał się skalować liniowo z liczbą wykorzystywanych rdzeni procesora, przez co używanie większej ich liczby nie musiało dawać lepszych wyników (przyspieszenie w równoległych programach rzadko jest równe liczbie wątków procesora). Mimo to, największe eksperymenty okazały się być znacznie szybsze niż przewidywano.
+
+Pierwszy duży eksperyment miał następujące parametry: 24h, 11 rdzeni, 5k ewaluacji w cma i 2k konfiguracji w irace. Jego czas w kolejce wyniósł około 3 dni, co opóźniło mocno dalsze badania. Czas wykonania natomiast wyniósł jedynie 8.5h, co znacznie wyprzedziło szacowany czas (prawdopodobnie kwestia użycia lepszej partycji).
+
+Drugi (główny, największy) eksperyment miał natomiast parametry: 30h, 31 rdzeni, 10k ewaluacji w cma i 5k konfiguracji w irace. Ten eksperyment również czekał w kolejce 3 dni i zdołał policzyć się ostatniego dnia przed zdaniem sprawozdania. Zajął jedynie 11h, więc mógł zostać oszacowany lepiej, jednak zależało nam na wykonaniu pełnego eksperyentu, a nie mielibyśmy już kolejnej szansy po tym.
+
+Planowany budżet do wykorzystania: około 1200h.
+Wykorzystany budżet: około 600h.
 
 ## Opracowanie wyników
 
